@@ -7,12 +7,17 @@
     <title>Bootcamp widgets</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+    body {
+            background-color: #457b9d;
+        }
+</style>
 </head>
 
 <body>
     <div style="text-align: center;">
         <h1 class="heading">Bootcamp Widgets</h1>
-        <div style="border: 1px solid #000; border-radius: 0.3em;">
+        <div style="border: 1px solid #000; border-radius: 0.3em; background-color: #a8dadc;">
             <h2>The greet function <i class="material-icons">waving_hand</i></h2>
             <div x-data="greetingNeighbour()">
                 <input x-model="neighbourName" type="text" placeholder="Enter neighbour's name">
@@ -27,7 +32,7 @@
 
         <p></p>
 
-        <div style="border: 1px solid #000; border-radius: 0.3em;">
+        <div style="border: 1px solid #000; border-radius: 0.3em; background-color: #a8dadc;">
             <h2>The transport fee function <i class="material-icons">commute</i></h2>
             <div x-data="totalFees()">
                 <label>
@@ -46,7 +51,7 @@
 
         <p></p>
 
-        <div style="border: 1px solid #000; border-radius: 0.3em;">
+        <div style="border: 1px solid #000; border-radius: 0.3em; background-color: #a8dadc;">
             <h2>The total phone bill function <i class="material-icons">receipt_long</i></h2>
             <div x-data="phoneBill()">
                 <input x-model="phoneData" type="text" placeholder="Enter as call, sms">
@@ -57,7 +62,7 @@
 
         <p></p>
 
-        <div style="border: 1px solid #000; border-radius: 0.3em;">
+        <div style="border: 1px solid #000; border-radius: 0.3em; background-color: #a8dadc;">
             <h2>The word game function <i class="material-icons">notes</i></h2>
             <div x-data="wordCrush()">
                 <input x-model="sentence" type="text" placeholder="Enter a sentence">
