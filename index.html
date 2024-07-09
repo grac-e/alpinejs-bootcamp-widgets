@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp widgets</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1 class="heading">Bootcamp Widgets</h1>
+        <div style="border: 1px solid #000; border-radius: 0.3em;">
+            <h2>The greet function <i class="material-icons">waving_hand</i></h2>
+            <div x-data="greetingNeighbour()">
+                <input x-model="neighbourName" type="text" placeholder="Enter neighbour's name">
+                <select x-model="preferredLanguage">
+                    <option value="en">English</option>
+                    <option value="iz">isiZulu</option>
+                </select>
+                <button @click="greetNeighbour">Greet</button>
+                <p x-text="message"></p>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div style="border: 1px solid #000; border-radius: 0.3em;">
+            <h2>The transport fee function <i class="material-icons">commute</i></h2>
+            <div x-data="totalFees()">
+                <label>
+                    <input type="radio" x-model="selectShift" value="morning"> Morning shift
+                </label>
+                <label>
+                    <input type="radio" x-model="selectShift" value="afternoon"> Afternoon shift
+                </label>
+                <label>
+                    <input type="radio" x-model="selectShift" value="nightshift"> Night shift
+                </label>
+                <button @click="calculateFee">Calculate Fee</button>
+                <p x-text="message"></p>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div style="border: 1px solid #000; border-radius: 0.3em;">
+            <h2>The total phone bill function <i class="material-icons">receipt_long</i></h2>
+            <div x-data="phoneBill()">
+                <input x-model="phoneData" type="text" placeholder="Enter as call, sms">
+                <button @click="calculateBill">Calculate Total Bill</button>
+                <p x-text="bill"></p>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div style="border: 1px solid #000; border-radius: 0.3em;">
+            <h2>The word game function <i class="material-icons">notes</i></h2>
+            <div x-data="wordCrush()">
+                <input x-model="sentence" type="text" placeholder="Enter a sentence">
+                <button @click="wordGame">Analyze</button>
+                <p>Longest Word: <span x-text="theLongestWord"></span></p>
+                <p>Shortest Word: <span x-text="theShortestWord"></span></p>
+                <p>Total Length: <span x-text="thewordLength"></span></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./greet.js"></script>
+    <script src="./transport fee.js"></script>
+    <script src="./total phone bill.js"></script>
+    <script src="./word game.js"></script>
+</body>
+
+</html>
