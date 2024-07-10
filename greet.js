@@ -20,9 +20,13 @@ function greetingNeighbour() {
             if (neighbourName == "") {
                 return "Please enter name";
             }
-            return this.greetings[language] + ', ' + neighbourName;        },
+            return this.greetings[language] + ', ' + neighbourName;        
+        },
         greetNeighbour() {
             this.message = this.greet(this.neighbourName, this.preferredLanguage);
+            setTimeout(() => {
+                this.message = '';
+            }, 5000);
         }
     }
 }

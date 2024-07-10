@@ -46,6 +46,11 @@ function wordCrush() {
             this.theLongestWord = this.longestWord(this.sentence);
             this.theShortestWord = this.shortestWord(this.sentence);
             this.thewordLength = this.wordLengths(this.sentence);
+            setTimeout(() => {
+                this.theLongestWord = '';
+                this.theShortestWord = '';
+                this.thewordLength = '';
+            }, 5000);
         }
     }
 }

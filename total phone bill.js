@@ -41,6 +41,9 @@ function phoneBill() {
         },
         calculateBill() {
             this.bill = this.totalPhoneBill(this.phoneData);
+            setTimeout(() => {
+                this.bill = '';
+            }, 5000);
         }
     }
 }

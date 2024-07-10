@@ -25,6 +25,9 @@ function totalFees() {
         },
         calculateFee() {
             this.message = this.transportFee(this.selectShift);
+            setTimeout(() => {
+                this.message = '';
+            }, 5000);
         }
     }
 }
