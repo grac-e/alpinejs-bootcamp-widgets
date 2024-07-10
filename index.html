@@ -73,11 +73,24 @@
             </div>
         </div>
 
+        <p></p>
+
+        <div style="border: 1px solid #000; border-radius: 0.3em; background-color: #a8dadc;">
+            <h2>The enough airtime function <i class="material-icons">contact_phone</i></h2>
+            <div x-data="airtimeCalculator()">
+                <input x-model="projectedUsage" type="text" placeholder="Enter usage (call,data,sms)">
+                <input x-model="availableAirtime" type="number" placeholder="Enter available airtime">
+                <button @click="calculateAirtime">Calculate Airtime</button>
+                <p><strong>Airtime Left:</strong> <span x-text="airtimeLeft"></span></p>
+            </div>
+        </div>
+
     </div>
     <script src="./greet.js"></script>
     <script src="./transport fee.js"></script>
     <script src="./total phone bill.js"></script>
     <script src="./word game.js"></script>
+    <script src="./enough airtime.js"></script>
 </body>
 
 </html>
